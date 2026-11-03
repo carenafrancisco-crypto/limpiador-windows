@@ -35,6 +35,16 @@ set "RESETBASE=1"
 set "USAR_CLEANMGR=1"
 ```
 
+## Sacar apps del inicio: `desactivar_inicio.bat`
+
+Doble clic. Saca del arranque de Windows las apps que comen RAM en segundo plano (siguen instaladas):
+Codex / ChatGPT, CCleaner (y su servicio pasa a Manual), Edge en segundo plano, Teams, Firefox, WhatsApp.
+
+- Muestra todo lo que arranca con Windows: `APAGADO` (lo cambió), `ya off`, `sigue` (no está en la lista).
+- Para agregar o sacar apps: editar la lista `$Apagar` arriba de `desactivar_inicio.ps1`.
+- Probar sin cambiar nada: `powershell -ExecutionPolicy Bypass -File desactivar_inicio.ps1 -Simular`
+- Reactivar una app: Administrador de tareas → Aplicaciones de arranque → Habilitar.
+
 ## Salvedades
 
 - Usuario sin permisos de admin: si otra cuenta pone la contraseña de admin, los temporales/cachés que limpia son los de **esa** cuenta, no los del usuario actual.
